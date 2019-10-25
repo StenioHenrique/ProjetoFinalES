@@ -7,15 +7,15 @@ O sistema funcionará com base nas denúncias feitas pela própria comunidade, e
 As denúncias também estarão disponíveis para a Polícia Militar, para que medidas mais efetivas possam ser tomadas em relação ao combate ao crime, podendo ser criadas rotas de policiamento nos bairros que possuem mais número de denúncias.
 # Tecnologias
   # Linguagens Utilizadas
-    •	PHP
+    • PHP
 
-    •	CSS
+    • CSS
 
-    •	HTML
+    • HTML
 
-    •	JavaScript
+    • JavaScript
 
-    •	BootStrap
+    • BootStrap
 
   # Banco de Dados
      • MySQL 

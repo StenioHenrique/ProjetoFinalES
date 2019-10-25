@@ -5,9 +5,20 @@ Ele permite ao usuário cadastrar seus dados, como NOME, CPF, e ENDEREÇO, e à 
 denúncias de casos de insegurança pública.
 O sistema funcionará com base nas denúncias feitas pela própria comunidade, e estas denúncias serão de livre acesso à todos os usuários do sistema, para que os mesmos possam se informar e consequentemente se previnir de lugares com maior taxa de criminalidade.
 As denúncias também estarão disponíveis para a Polícia Militar, para que medidas mais efetivas possam ser tomadas em relação ao combate ao crime, podendo ser criadas rotas de policiamento nos bairros que possuem mais número de denúncias.
-# Tecnologias Utilizadas
-#Linguagem
+# Tecnologias
+  # Linguagens Utilizadas
+    •	PHP
 
-#Banco de Dados
+    •	CSS
 
-#Servidor
+    •	HTML
+
+    •	JavaScript
+
+    •	BootStrap
+
+  # Banco de Dados
+     • MySQL 
+
+  # Servidor
+     • Apache

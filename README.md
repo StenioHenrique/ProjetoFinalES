@@ -21,8 +21,6 @@ As denúncias também estarão disponíveis para a Polícia Militar, para que me
 
     • JavaScript
 
-    • BootStrap
-
   # Banco de Dados
      • MySQL 5.7.14
 

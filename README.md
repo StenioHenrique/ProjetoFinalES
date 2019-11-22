@@ -26,3 +26,5 @@ As denúncias também estarão disponíveis para a Polícia Militar, para que me
 
   # Servidor
      • Apache 2.4.23
+
+#Padrões 

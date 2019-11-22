@@ -43,3 +43,8 @@ As pastas estão organizadas da seguinte maneira:
 5. Evitar condição de negação no IF, sendo assim, será avaliando primeiramente a condição verdadeira e caso falso será executado o ELSE.
 6.Utilização de break, para que o percorrimento de loops seja somente o necessário e não seja executado várias vezes sem necessidade.
 
+#Regras
+Create: nova pasta ou arquivo foi criao
+Add: Novo arquivo ou pasta foi adicionado
+Update:Arquivo ou pasta foi atualizado
+Delete: Arquivo ou pasta foi excluído

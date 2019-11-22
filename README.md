@@ -26,3 +26,20 @@ As denúncias também estarão disponíveis para a Polícia Militar, para que me
 
   # Servidor
      • Apache 2.4.23
+     
+# Padrões
+As pastas estão organizadas da seguinte maneira:
+      • Na pasta “Documentação” encontra-se o design do projeto, os diagramas e suas respectivas documentações.
+      • “Padrões Adotados” contém as regras de verificação e análise de requisitos.
+      • Na pasta nomeada “Requisitos” está disponível o documento de requisitos e os requisitos funcionais.
+      • Em “Visão Geral do Produto” há uma breve descrição do produto e suas funcionalidades.
+      
+# Boas práticas de programação
+
+1. Identação adequada para facilitar leitura e entendimento do código.
+2. Nomear variáveis de maneira intuiva com o objetivo de dar mais sentido ao escopo do código.
+3. Comentários no código para detalhar o código e servir como um guia.
+4. Padronização de nome das constantes em caixa alta, afim de destacá-las e assim tornar mais fácil a identificação das mesmas no código.
+5. Evitar condição de negação no IF, sendo assim, será avaliando primeiramente a condição verdadeira e caso falso será executado o ELSE.
+6.Utilização de break, para que o percorrimento de loops seja somente o necessário e não seja executado várias vezes sem necessidade.
+

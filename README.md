@@ -45,7 +45,7 @@ As pastas estão organizadas da seguinte maneira:
 
 
 # Regras
-Create: nova pasta ou arquivo foi criao                                                                                                  
+Create: nova pasta ou arquivo foi criado                                                                                                  
 Add: Novo arquivo ou pasta foi adicionado                                                                                             
-Update:Arquivo ou pasta foi atualizado                                                                                                    
+Update:Arquivo ou pasta foi atualizado                                                                                                     
 Delete: Arquivo ou pasta foi excluído                                                                                                    

@@ -39,7 +39,7 @@ return [
     |
     */
 
-    'debug' => env('APP_DEBUG', false),
+    'debug' => env('APP_DEBUG', 'base64:7LyC+NT+j69YEeKaD2pG1GJ/RL8NKI/lGMhoVam8dVM='),
 
     /*
     |--------------------------------------------------------------------------

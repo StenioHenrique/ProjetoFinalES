@@ -15,12 +15,12 @@ class CreateOcorrenciasTable extends Migration
     {
         Schema::create('ocorrencias', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->string('titulo');
             $table->string('endereco');
-            $table->decimal('idade',2,0);
-            $table->string('telefone');
             $table->string('cidade');
             $table->string('bairro');
-            $table->string('cpf');
+            $table->string('descricao');
+            $table->string('imagem');
             $table->timestamps();
         });
     }

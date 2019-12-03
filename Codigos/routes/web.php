@@ -11,13 +11,10 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
-Route::get('/admin/ocorrencias', ['as'=>'admin.ocorrencias'], 'uses' => 'Admin\OcorrenciaController@index');
-Route::get('/admin/ocorrencias/criar', ['as'=>'admin.ocorrencias.criar'], 'uses' => 'Admin\OcorrenciaController@criar');
-Route::post('/admin/ocorrencias/salvar', ['as'=>'admin.ocorrencias.salvar'], 'uses' => 'Admin\OcorrenciaController@salvar');
-Route::get('/admin/ocorrencias/editar/{id}', ['as'=>'admin.ocorrencias.editar'], 'uses' => 'Admin\OcorrenciaController@editar');
-Route::put('/admin/ocorrencias/atualizar/{id}', ['as'=>'admin.ocorrencias.atualizar'], 'uses' => 'Admin\OcorrenciaController@atualizar');
-Route::get('/admin/ocorrencias/deletar/{id}', ['as'=>'admin.ocorrencias.deletar'], 'uses' => 'Admin\OcorrenciaController@deletar');
+Route::get('/', ['as'=>'site.home', 'uses' => 'Site\HomeController@index']);
+Route::get('/ocorrencias', ['as'=>'ocorrencias', 'uses' => 'Ocorrencias\OcorrenciaController@index']);
+Route::get('/ocorrencias/criar', ['as'=>'ocorrencias.adicionar','uses' => 'Ocorrencias\OcorrenciaController@adicionar']);
+Route::post('/ocorrencias/salvar', ['as'=>'ocorrencias.salvar' , 'uses' => 'Ocorrencias\OcorrenciaController@salvar']);
+Route::get('/ocorrencias/editar/{id}', ['as'=>'ocorrencias.editar' , 'uses' => 'Ocorrencias\OcorrenciaController@editar']);
+Route::put('/ocorrencias/atualizar/{id}', ['as'=>'ocorrencias.atualizar' , 'uses' => 'Ocorrencias\OcorrenciaController@atualizar']);
+Route::get('/ocorrencias/deletar/{id}', ['as'=>'ocorrencias.deletar' , 'uses' => 'Ocorrencias\OcorrenciaController@deletar']);

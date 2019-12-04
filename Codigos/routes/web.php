@@ -11,10 +11,23 @@
 |
 */
 
-Route::get('/', ['as'=>'site.home', 'uses' => 'Site\HomeController@index']);
-Route::get('/ocorrencias', ['as'=>'ocorrencias', 'uses' => 'Ocorrencias\OcorrenciaController@index']);
-Route::get('/ocorrencias/criar', ['as'=>'ocorrencias.adicionar','uses' => 'Ocorrencias\OcorrenciaController@adicionar']);
-Route::post('/ocorrencias/salvar', ['as'=>'ocorrencias.salvar' , 'uses' => 'Ocorrencias\OcorrenciaController@salvar']);
-Route::get('/ocorrencias/editar/{id}', ['as'=>'ocorrencias.editar' , 'uses' => 'Ocorrencias\OcorrenciaController@editar']);
-Route::put('/ocorrencias/atualizar/{id}', ['as'=>'ocorrencias.atualizar' , 'uses' => 'Ocorrencias\OcorrenciaController@atualizar']);
-Route::get('/ocorrencias/deletar/{id}', ['as'=>'ocorrencias.deletar' , 'uses' => 'Ocorrencias\OcorrenciaController@deletar']);
+
+Route::get('/', ['as'=>'site.login', 'uses' => 'Site\LoginController@index']);
+Route::post('/login', ['as'=>'site.entrar', 'uses' => 'Site\LoginController@entrar']);
+Route::get('/login/sair', ['as'=>'site.login.sair', 'uses' => 'Site\LoginController@sair']);
+Route::get('/cadastrar', ['as' => 'site.cadastrar', 'uses' => 'Site\LoginController@cadastrar']);
+Route::post('/cadastrar/salvar', ['as' => 'site.salvarcadastro', 'uses' => 'Site\LoginController@salvarcadastro']);
+
+
+
+Route::group(['middleware'=>'auth'], function()
+{
+  Route::get('/home', ['as'=>'site.home', 'uses' => 'Site\HomeController@index']);
+
+  Route::get('/ocorrencias', ['as'=>'ocorrencias', 'uses' => 'Ocorrencias\OcorrenciaController@index']);
+  Route::get('/ocorrencias/criar', ['as'=>'ocorrencias.adicionar','uses' => 'Ocorrencias\OcorrenciaController@adicionar']);
+  Route::post('/ocorrencias/salvar', ['as'=>'ocorrencias.salvar' , 'uses' => 'Ocorrencias\OcorrenciaController@salvar']);
+  Route::get('/ocorrencias/editar/{id}', ['as'=>'ocorrencias.editar' , 'uses' => 'Ocorrencias\OcorrenciaController@editar']);
+  Route::put('/ocorrencias/atualizar/{id}', ['as'=>'ocorrencias.atualizar' , 'uses' => 'Ocorrencias\OcorrenciaController@atualizar']);
+  Route::get('/ocorrencias/deletar/{id}', ['as'=>'ocorrencias.deletar' , 'uses' => 'Ocorrencias\OcorrenciaController@deletar']);
+});

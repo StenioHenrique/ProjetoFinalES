@@ -32,6 +32,8 @@ class OcorrenciaController extends Controller
         $nomeImagem = "imagem_".$num.".".$ext;
         $imagem->move($dir,$nomeImagem);
         $dados['imagem'] = $dir."/".$nomeImagem;
+      } else {
+        $dados['imagem'] = "img/ocorrencias/semfoto.jpg";
       }
 
       Ocorrencia::create($dados);

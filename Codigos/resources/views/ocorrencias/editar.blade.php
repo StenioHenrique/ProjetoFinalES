@@ -9,7 +9,7 @@
         {{csrf_field()}}
         <input type="hidden" name="_method" value="put">
         @include('ocorrencias._form')
-        <button class="btn deep-orange">Atualizar</button>
+        <button class="btn btn-danger deep-orange" onclick="return confirm('Tem certeza que deseja editar essa Ocorrência?')">Editar</button>
       </form>
   </div>
 @endsection

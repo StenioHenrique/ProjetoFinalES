@@ -23,5 +23,8 @@
         </div>
       @endforeach
   </div>
+  <div class="row" aling="center">
+    {{$ocorrencias->links()}}
+  </div>
 </div>
 @endsection

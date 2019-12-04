@@ -10,7 +10,7 @@ class HomeController extends Controller
 {
     public function index()
     {
-      $ocorrencias = Ocorrencia::all();
+      $ocorrencias = Ocorrencia::paginate(10);
       return view('home', compact('ocorrencias'));
     }
 }

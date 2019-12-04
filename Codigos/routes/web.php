@@ -12,8 +12,16 @@
 */
 
 
-Route::get('/', ['as'=>'site.login', 'uses' => 'Site\LoginController@index']);
-Route::post('/login', ['as'=>'site.entrar', 'uses' => 'Site\LoginController@entrar']);
+Route::get('/', function () {
+    return view('homeguest');
+});
+
+Route::get('/login', ['as'=>'site.login', 'uses' => 'Site\LoginController@index']);
+Route::get('/bairros', ['as'=>'bairro.listar', 'uses' => 'Site\BairroController@index']);
+Route::get('/bairros/cadastrar/', ['as'=>'bairro.cadastrar', 'uses' => 'Site\BairroController@cadastrar']);
+Route::post('/bairros/cadastrar/salvar', ['as'=>'bairro.salvar', 'uses' => 'Site\BairroController@salvar']);
+
+Route::post('/login/entrar', ['as'=>'site.entrar', 'uses' => 'Site\LoginController@entrar']);
 Route::get('/login/sair', ['as'=>'site.login.sair', 'uses' => 'Site\LoginController@sair']);
 Route::get('/cadastrar', ['as' => 'site.cadastrar', 'uses' => 'Site\LoginController@cadastrar']);
 Route::post('/cadastrar/salvar', ['as' => 'site.salvarcadastro', 'uses' => 'Site\LoginController@salvarcadastro']);

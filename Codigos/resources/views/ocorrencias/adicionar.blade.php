@@ -9,7 +9,7 @@
         {{csrf_field()}}
         @include('ocorrencias._form')
 
-        <button class="btn deep-orange">Salvar</button>
+        <button class="btn teal darken-4">Salvar</button>
       </form>
   </div>
 @endsection

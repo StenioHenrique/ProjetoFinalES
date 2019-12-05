@@ -25,14 +25,17 @@
               <td>{{ $registro->email}}</td>
               <td><img src = "{{asset($registro->imagem)}}" alt = "{{$registro->titulo}}" width ="150" height="60" /></td>
               <td>
-                <a class="btn deep-orange" href="{{route('ocorrencias.editar', $registro->id)}}">Editar</a>
-                <a class="btn btn-danger red" onclick="return confirm('Tem certeza que deseja excluir essa Ocorrência?')" href="{{route('perfil.apagar', $registro->id)}}">Excluir</a>
+                <a class="btn cyan darken-4" href="{{route('ocorrencias.editar', $registro->id)}}">Editar</a>
+                <a class="btn btn-danger red lighten-1" onclick="return confirm('Tem certeza que deseja excluir essa Ocorrência?')" href="{{route('ocorrencias.deletar', $registro->id)}}">Excluir</a>
 
               </td>
             </tr>
           @endforeach
         </tbody>
       </table>
+    </div>
+    <div class="row">
+      <a class="btn light-blue darken-4" href="{{route('ocorrencias.adicionar')}}">Adicionar Ocorrência</a>
     </div>
   </div>
 @endsection

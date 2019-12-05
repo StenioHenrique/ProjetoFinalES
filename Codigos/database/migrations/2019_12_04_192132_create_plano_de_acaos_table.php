@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateOcorrenciasTable extends Migration
+class CreatePlanoDeAcaosTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,17 +13,14 @@ class CreateOcorrenciasTable extends Migration
      */
     public function up()
     {
-        Schema::create('ocorrencias', function (Blueprint $table) {
+        Schema::create('plano_de_acaos', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('titulo');
             $table->string('descricao');
-            $table->string('endereco');
-            $table->string('cidade');
-            $table->string('bairro');
-            $table->string('imagem');
-            $table->DateTime('data');
-            $table->integer('usuario_id');
-            $table->foreign('usuario_id')->references('id')->on('users')->onDelete('cascade');
+            $table->integer('id_categoria');
+            $table->integer('id_bairro');
+            $table->foreign('categoria_id')->references('nome')->on('categorias')->onDelete('cascade');
+            $table->foreign('bairro_id')->references('bairro')->on('bairros')->onDelete('cascade');
             $table->timestamps();
         });
     }
@@ -35,6 +32,6 @@ class CreateOcorrenciasTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('ocorrencias');
+        Schema::dropIfExists('plano_de_acaos');
     }
 }

@@ -17,7 +17,7 @@
           <input type="password" name="password" required>
           <label>Senha</label>
         </div>
-        <button class="btn deep-orange">Login</button>
+        <button class="btn teal darken-4">Login</button>
       </form>
   </div>
 @endsection

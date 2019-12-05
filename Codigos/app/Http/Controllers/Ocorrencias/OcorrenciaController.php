@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Ocorrencias;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Ocorrencia;
+use App\User;
 
 class OcorrenciaController extends Controller
 {
@@ -34,10 +35,17 @@ class OcorrenciaController extends Controller
         $dados['imagem'] = $dir."/".$nomeImagem;
       } else {
         $dados['imagem'] = "img/ocorrencias/semfoto.jpg";
-      }
-
-      Ocorrencia::create($dados);
-
+      }/*
+      Ocorrencia::create($dados);*/
+      $ocorrencia = new Ocorrencia();
+      $ocorrencia->titulo = $req['titulo'];
+      $ocorrencia->descricao = $req['descricao'];
+      $ocorrencia->endereco = $req['endereco'];
+      $ocorrencia->bairro = $req['bairro'];
+      $ocorrencia->cidade = $req['cidade'];
+      $ocorrencia->data = $req['data'];
+      $ocorrencia->titulo = $dados['imagem'];
+      $ocorrencia->id_usuario = Auth::user()->id;
       return redirect()->route('ocorrencias');
     }
 

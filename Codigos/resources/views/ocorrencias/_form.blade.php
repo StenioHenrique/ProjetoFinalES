@@ -1,26 +1,30 @@
 <div class="input-field">
-  <input type="text" name="titulo" value="{{isset($registro->titulo) ? $registro->titulo : ''}}" required>
+  <input type="text" name="titulo" value="{{isset($registro->titulo) ? $registro->titulo : ''}}" required autocomplete="no">
   <label>Título</label>
 </div>
 
 <div class="input-field">
-  <input type="text" name="descricao" value="{{isset($registro->descricao) ? $registro->descricao : ''}}" required>
+  <input type="text" name="descricao" value="{{isset($registro->descricao) ? $registro->descricao : ''}}" required autocomplete="no">
   <label>Descrição</label>
 </div>
 
 <div class="input-field">
-  <input type="text" name="endereco" value="{{isset($registro->endereco) ? $registro->endereco : ''}}" required>
+  <input type="text" name="endereco" value="{{isset($registro->endereco) ? $registro->endereco : ''}}" required autocomplete="no">
   <label>Endereço</label>
 </div>
 
 <div class="input-field">
-  <input type="text" name="bairro" value="{{isset($registro->bairro) ? $registro->bairro : ''}}" required>
+  <input type="text" name="bairro" value="{{isset($registro->bairro) ? $registro->bairro : ''}}" required autocomplete="no">
   <label>Bairro</label>
 </div>
 
 <div class="input-field">
-  <input type="text" name="cidade" value="{{isset($registro->cidade) ? $registro->cidade : ''}}" required>
+  <input type="text" name="cidade" value="{{isset($registro->cidade) ? $registro->cidade : ''}}" required autocomplete="no">
   <label>Cidade</label>
+</div>
+
+<div class="input-field">
+  <input type="datetime-local" name="data" value="{{isset($registro->data) ? $registro->data : ''}}">
 </div>
 
 <div class="file-field input-field">

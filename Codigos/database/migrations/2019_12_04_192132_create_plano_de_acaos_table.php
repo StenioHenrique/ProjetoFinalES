@@ -17,10 +17,10 @@ class CreatePlanoDeAcaosTable extends Migration
             $table->bigIncrements('id');
             $table->string('titulo');
             $table->string('descricao');
-            $table->integer('id_categoria');
-            $table->integer('id_bairro');
-            $table->foreign('categoria_id')->references('nome')->on('categorias')->onDelete('cascade');
-            $table->foreign('bairro_id')->references('bairro')->on('bairros')->onDelete('cascade');
+            $table->integer('categoria_id')->unsigned();
+            $table->integer('bairro_id')->unsigned();
+            $table->foreign('categoria_id')->references('id')->on('categorias');
+            $table->foreign('bairro_id')->references('id')->on('bairros');
             $table->timestamps();
         });
     }

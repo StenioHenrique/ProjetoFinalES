@@ -26,11 +26,19 @@ Route::get('/login/sair', ['as'=>'site.login.sair', 'uses' => 'Site\LoginControl
 Route::get('/cadastrar', ['as' => 'site.cadastrar', 'uses' => 'Site\LoginController@cadastrar']);
 Route::post('/cadastrar/salvar', ['as' => 'site.salvarcadastro', 'uses' => 'Site\LoginController@salvarcadastro']);
 
-
-
 Route::group(['middleware'=>'auth'], function()
 {
   Route::get('/home', ['as'=>'site.home', 'uses' => 'Site\HomeController@index']);
+
+  Route::get('/categorias/cadastro', ['as' => 'categoria.cadastro', 'uses' => 'Site\CategoriaController@cadastro']);
+  Route::post('/categorias/cadastro/salvar', ['as' => 'categoria.salvar', 'uses' => 'Site\CategoriaController@salvar']);
+
+  Route::get('/plano', ['as' => 'plano.listar', 'uses' => 'Site\PlanoController@index']);
+  Route::get('/plano/cadastrar', ['as' => 'plano.cadastrar', 'uses' => 'Site\PlanoController@cadastrar']);
+  Route::post('/plano/cadastrar/salvar', ['as' => 'plano.salvar', 'uses' => 'Site\PlanoController@salvar']);
+  Route::get('/plano/editar/{id}', ['as' => 'plano.editar', 'uses' => 'Site\PlanoController@editar']);
+  Route::put('/plano/atualizar/{id}', ['as' => 'plano.atualizar', 'uses' => 'Site\PlanoController@atualizar']);
+  Route::get('/plano/deletar/{id}', ['as' => 'plano.deletar', 'uses' => 'Site\PlanoController@deletar']);
 
   Route::get('/ocorrencias', ['as'=>'ocorrencias', 'uses' => 'Ocorrencias\OcorrenciaController@index']);
   Route::get('/ocorrencias/criar', ['as'=>'ocorrencias.adicionar','uses' => 'Ocorrencias\OcorrenciaController@adicionar']);

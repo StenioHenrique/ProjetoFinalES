@@ -25,6 +25,7 @@
               @else
                 <li><a href="/home">Home</a></li>
                 <li><a href="{{route('ocorrencias')}}">Ocorrências</a></li>
+                <li><a href="{{route('plano.listar')}}">Planos de Ação</a></li>
                 <li><a href="#">{{Auth::user()->name}}</a></li>
                 <li><a href="{{route('site.login.sair')}}">Sair</a></li>
 

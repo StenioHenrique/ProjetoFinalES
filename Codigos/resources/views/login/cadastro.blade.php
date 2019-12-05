@@ -37,6 +37,13 @@
           <label>Endereço</label>
         </div>
 
+        <label>Bairro</label>
+        <select class="browser-default" name="bairro_id" id = "bairroUser">
+
+        </select>
+
+
+
         <div class="input-field">
           <input type="text" name="cidade" required autocomplete="no">
           <label>Cidade</label>
@@ -54,4 +61,6 @@
         <button class="btn teal darken-4">Cadastrar</button>
       </form>
   </div>
+
+
 @endsection

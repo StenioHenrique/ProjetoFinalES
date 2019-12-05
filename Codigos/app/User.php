@@ -16,7 +16,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password', 'idade','telefone','endereco','cidade','imagem'
+        'name', 'email', 'password', 'idade','telefone','endereco','cidade','imagem', 'bairro_id'
     ];
 
     /**
@@ -37,8 +37,4 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-    public function Ocorrencia()
-    {
-        return $this->hasMany('Ocorrencia');
-    }
 }

@@ -35,17 +35,9 @@ class OcorrenciaController extends Controller
         $dados['imagem'] = $dir."/".$nomeImagem;
       } else {
         $dados['imagem'] = "img/ocorrencias/semfoto.jpg";
-      }/*
-      Ocorrencia::create($dados);*/
-      $ocorrencia = new Ocorrencia();
-      $ocorrencia->titulo = $req['titulo'];
-      $ocorrencia->descricao = $req['descricao'];
-      $ocorrencia->endereco = $req['endereco'];
-      $ocorrencia->bairro = $req['bairro'];
-      $ocorrencia->cidade = $req['cidade'];
-      $ocorrencia->data = $req['data'];
-      $ocorrencia->titulo = $dados['imagem'];
-      $ocorrencia->id_usuario = Auth::user()->id;
+      }
+      Ocorrencia::create($dados);
+
       return redirect()->route('ocorrencias');
     }
 

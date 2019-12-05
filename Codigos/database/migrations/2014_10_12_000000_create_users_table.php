@@ -23,8 +23,8 @@ class CreateUsersTable extends Migration
             $table->string('endereco');
             $table->string('cidade');
             $table->string('imagem');
-            $table->integer('bairro_id')->nullable();
-            $table->foreign('bairro_id')->references('bairro')->on('bairros');
+            $table->integer('bairro_id')->unsigned();
+            $table->foreign('bairro_id')->references('id')->on('bairros');
             $table->rememberToken();
             $table->timestamps();
         });

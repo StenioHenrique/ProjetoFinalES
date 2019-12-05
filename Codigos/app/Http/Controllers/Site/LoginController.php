@@ -22,7 +22,8 @@ class LoginController extends Controller
       {
         return redirect()->route('site.home');
       } else {
-        return redirect()->route('site.login');
+        return view('login.erro');
+
       }
     }
 
@@ -41,7 +42,7 @@ class LoginController extends Controller
     public function salvarcadastro(Request $req)
     {
       $dados = $req->all();
-
+      
       if($req->hasFile('imagem'))
       {
         $imagem = $req->file('imagem');

@@ -22,8 +22,6 @@ class CreateOcorrenciasTable extends Migration
             $table->string('bairro');
             $table->string('imagem');
             $table->DateTime('data');
-            $table->integer('usuario_id');
-            $table->foreign('usuario_id')->references('id')->on('users')->onDelete('cascade');
             $table->timestamps();
         });
     }

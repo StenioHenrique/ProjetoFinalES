@@ -10,9 +10,4 @@ class Ocorrencia extends Model
     'titulo', 'descricao', 'endereco', 'bairro', 'cidade', 'imagem', 'data'
   ];
 
-  public function user()
-  {
-    return $this->belongsTo('User');
-  }
-
 }

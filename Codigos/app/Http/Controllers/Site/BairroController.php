@@ -22,9 +22,15 @@ class BairroController extends Controller
   public function salvar(Request $req)
   {
     $dados = $req->all();
-    
+
     Bairro::create($dados);
 
     return redirect()->route('bairro.listar');
+  }
+
+  public function indexJson()
+  {
+    $registros = Bairro::all();
+    return json_encode($registros);
   }
 }

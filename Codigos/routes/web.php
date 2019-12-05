@@ -30,4 +30,9 @@ Route::group(['middleware'=>'auth'], function()
   Route::get('/ocorrencias/editar/{id}', ['as'=>'ocorrencias.editar' , 'uses' => 'Ocorrencias\OcorrenciaController@editar']);
   Route::put('/ocorrencias/atualizar/{id}', ['as'=>'ocorrencias.atualizar' , 'uses' => 'Ocorrencias\OcorrenciaController@atualizar']);
   Route::get('/ocorrencias/deletar/{id}', ['as'=>'ocorrencias.deletar' , 'uses' => 'Ocorrencias\OcorrenciaController@deletar']);
+
+  //Route::get('/perfil/{id}', ['as'=>'perfil.visualizar', 'uses'=> 'Site\PerfilController@visualizar']);
+  /*Route::get('/perfil/editar', ['as'=> 'perfil.editar', 'uses' => 'Site\PerfilController@editar']);
+  Route::post('/perfil/editar/salvar', ['as' => 'perfil.salvar','uses'=> 'Site\PerfilController@salvar']);
+  Route::post('/perfil/editar/salvar', ['as' => 'perfil.apagar','uses'=> 'Site\PerfilController@apagar']);*/
 });

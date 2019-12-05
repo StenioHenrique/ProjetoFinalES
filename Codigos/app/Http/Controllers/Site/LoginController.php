@@ -57,9 +57,8 @@ class LoginController extends Controller
       }
 
       $dados['password'] = bcrypt($req['password']);
-
       User::create($dados);
-
       return redirect()->route('site.login');
     }
+
 }

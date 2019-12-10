@@ -21,13 +21,15 @@
         <tbody>
           @foreach($registros as $registro)
             <tr>
-              <td>{{ $registro->nome}}</td>
-              <td>{{ $registro->email}}</td>
+              <td>{{ $registro->titulo}}</td>
+              <td>{{ $registro->endereco}}</td>
+              <td>{{ $registro->bairro}}</td>
+              <td>{{ $registro->cidade}}</td>
+              <td>{{ $registro->descricao}}</td>
               <td><img src = "{{asset($registro->imagem)}}" alt = "{{$registro->titulo}}" width ="150" height="60" /></td>
               <td>
                 <a class="btn cyan darken-4" href="{{route('ocorrencias.editar', $registro->id)}}">Editar</a>
                 <a class="btn btn-danger red lighten-1" onclick="return confirm('Tem certeza que deseja excluir essa Ocorrência?')" href="{{route('ocorrencias.deletar', $registro->id)}}">Excluir</a>
-
               </td>
             </tr>
           @endforeach

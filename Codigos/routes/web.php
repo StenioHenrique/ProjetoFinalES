@@ -16,6 +16,11 @@ Route::get('/', function () {
     return view('homeguest');
 });
 
+Route::get('/home', function() {
+    return view('homeguest');
+});
+
+
 Route::get('/login', ['as'=>'site.login', 'uses' => 'Site\LoginController@index']);
 Route::get('/bairros', ['as'=>'bairro.listar', 'uses' => 'Site\BairroController@index']);
 Route::get('/bairros/cadastrar/', ['as'=>'bairro.cadastrar', 'uses' => 'Site\BairroController@cadastrar']);
@@ -28,7 +33,6 @@ Route::post('/cadastrar/salvar', ['as' => 'site.salvarcadastro', 'uses' => 'Site
 
 Route::group(['middleware'=>'auth'], function()
 {
-  Route::get('/home', ['as'=>'site.home', 'uses' => 'Site\HomeController@index']);
 
   Route::get('/categorias/cadastro', ['as' => 'categoria.cadastro', 'uses' => 'Site\CategoriaController@cadastro']);
   Route::post('/categorias/cadastro/salvar', ['as' => 'categoria.salvar', 'uses' => 'Site\CategoriaController@salvar']);
@@ -37,7 +41,7 @@ Route::group(['middleware'=>'auth'], function()
   Route::get('/plano/cadastrar', ['as' => 'plano.cadastrar', 'uses' => 'Site\PlanoController@cadastrar']);
   Route::post('/plano/cadastrar/salvar', ['as' => 'plano.salvar', 'uses' => 'Site\PlanoController@salvar']);
   Route::get('/plano/editar/{id}', ['as' => 'plano.editar', 'uses' => 'Site\PlanoController@editar']);
-  Route::put('/plano/atualizar/{id}', ['as' => 'plano.atualizar', 'uses' => 'Site\PlanoController@atualizar']);
+  Route::post('/plano/atualizar/{id}', ['as' => 'plano.atualizar', 'uses' => 'Site\PlanoController@atualizar']);
   Route::get('/plano/deletar/{id}', ['as' => 'plano.deletar', 'uses' => 'Site\PlanoController@deletar']);
 
   Route::get('/ocorrencias', ['as'=>'ocorrencias', 'uses' => 'Ocorrencias\OcorrenciaController@index']);

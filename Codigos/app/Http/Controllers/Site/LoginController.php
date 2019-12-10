@@ -20,7 +20,7 @@ class LoginController extends Controller
       $dados = $req->all();
       if(Auth::attempt(['email'=>$dados['email'], 'password'=>$dados['password']]))
       {
-        return redirect()->route('site.home');
+        return redirect()->route('ocorrencias');
       } else {
         return view('login.erro');
 
@@ -42,7 +42,7 @@ class LoginController extends Controller
     public function salvarcadastro(Request $req)
     {
       $dados = $req->all();
-      
+
       if($req->hasFile('imagem'))
       {
         $imagem = $req->file('imagem');

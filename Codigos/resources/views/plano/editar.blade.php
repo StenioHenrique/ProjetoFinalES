@@ -5,7 +5,7 @@
 @section('conteudo')
   <div class = "container">
     <h3 class = "center">Editar Plano de Ação</h3>
-      <form class="" action="{{route('plano.atualizar')}}" method="post">
+      <form class="" action="{{route('plano.atualizar', $registro->id)}}" method="post">
         {{csrf_field()}}
         <div class="input-field">
           <input type="text" name="titulo"  value="{{$registro->titulo}}" required autocomplete="no">

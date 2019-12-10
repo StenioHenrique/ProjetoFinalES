@@ -18,11 +18,11 @@
             <a href="/" class="brand-logo">Super Vizinhos</a>
             <ul class="right hide-on-med-and-down">
               @if(Auth::guest())
-                <li><a href="{{route('site.login')}}">Login</a></li>
+                <li><a href="{{route('bairro.cadastrar')}}">Cadastrar Bairro</a></li>
+                <li><a href="{{route('bairro.listar')}}">Listar Bairros</a></li>
                 <li><a href="{{route('site.cadastrar')}}">Cadastrar</a></li>
                 <li><a href="{{route('site.login')}}">Login</a></li>
               @else
-                <li><a href="/home">Home</a></li>
                 <li><a href="{{route('ocorrencias')}}">Ocorrências</a></li>
                 <li><a href="{{route('plano.listar')}}">Planos de Ação</a></li>
                 <li><a href="#">{{Auth::user()->name}}</a></li>
@@ -35,16 +35,4 @@
           </div>
         </nav>
 
-        <ul class="sidenav" id="mobile">
-          @if(Auth::guest())
-            <li><a href="{{route('site.login')}}">Login</a></li>
-            <li><a href="{{route('site.cadastrar')}}">Cadastrar</a></li>
-            <li><a href="{{route('site.login')}}">Login</a></li>
-          @else
-            <li><a href="/home">Home</a></li>
-            <li><a href="{{route('ocorrencias')}}">Ocorrências</a></li>
-            <li><a href="{{route('perfil.visualizar')}}">{{Auth::user()->name}}</a></li>
-            <li><a href="{{route('site.login.sair')}}">Sair</a></li>
-          @endif
-        </ul>
     </header>

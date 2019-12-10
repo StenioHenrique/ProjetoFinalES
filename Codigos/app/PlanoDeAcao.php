@@ -7,6 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 class PlanoDeAcao extends Model
 {
   protected $fillable = [
-    'titulo', 'descricao', 'id_categoria', 'id_bairro'
+    'titulo', 'descricao', 'categoria_id', 'bairro_id'
   ];
 }

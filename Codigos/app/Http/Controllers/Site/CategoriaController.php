@@ -8,6 +8,12 @@ use App\Categoria;
 
 class CategoriaController extends Controller
 {
+  public function index()
+  {
+    $registros = Categoria::all();
+    return view('plano.categoria', compact('registros'));
+  }
+
   public function indexJson()
   {
     $registros = Categoria::all();
@@ -26,5 +32,11 @@ class CategoriaController extends Controller
     Categoria::create($dados);
 
     return redirect()->route('plano.cadastrar');
+  }
+
+  public function deletar($id)
+  {
+    Categoria::find($id)->delete();
+    return redirect()->route('categoria.lista');
   }
 }

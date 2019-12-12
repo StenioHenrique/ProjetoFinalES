@@ -34,8 +34,10 @@ Route::post('/cadastrar/salvar', ['as' => 'site.salvarcadastro', 'uses' => 'Site
 Route::group(['middleware'=>'auth'], function()
 {
 
+  Route::get('/categorias/listar', ['as' => 'categoria.lista', 'uses' => 'Site\CategoriaController@index']);
   Route::get('/categorias/cadastro', ['as' => 'categoria.cadastro', 'uses' => 'Site\CategoriaController@cadastro']);
   Route::post('/categorias/cadastro/salvar', ['as' => 'categoria.salvar', 'uses' => 'Site\CategoriaController@salvar']);
+  Route::get('/categorias/deletar/{id}', ['as' => 'categoria.deletar', 'uses' => 'Site\CategoriaController@deletar']);
 
   Route::get('/plano', ['as' => 'plano.listar', 'uses' => 'Site\PlanoController@index']);
   Route::get('/plano/cadastrar', ['as' => 'plano.cadastrar', 'uses' => 'Site\PlanoController@cadastrar']);
